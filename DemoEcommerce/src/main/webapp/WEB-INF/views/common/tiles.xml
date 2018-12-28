@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+    "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"
+    "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">
+
+<tiles-definitions>
+	<!-- Base Define Index -->
+	<definition name="base.definition.index" template="/WEB-INF/views/common/classic_index.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+		<put-attribute name="afterfooter" value="" />
+	</definition>
+
+	<!-- HOME PAGE -->
+	<definition name="homePage" extends="base.definition.index">
+		<put-attribute name="title" value="Home Page" />
+		<put-attribute name="content" value="/WEB-INF/views/index.jsp" />
+		<put-attribute name="afterfooter" value="/WEB-INF/views/afterfooter.jsp" />
+	</definition>
+
+	<!-- Base Define Product -->
+	<definition name="base.definition.product" template="/WEB-INF/views/common/classic_product.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+		<put-attribute name="afterfooter" value="" />
+	</definition>
+
+	<!-- PRODUCT -->
+	<definition name="product" extends="base.definition.product">
+		<put-attribute name="title" value="Product" />
+		<put-attribute name="content" value="/WEB-INF/views/product/product.jsp" />
+		<put-attribute name="afterfooter"
+			value="/WEB-INF/views/product/after_product.jsp" />
+	</definition>
+
+	<!-- Base Define Multiple -->
+	<definition name="base.definition.multi" template="/WEB-INF/views/common/classic_multi.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="header" value="/WEB-INF/views/common/header.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer.jsp" />
+		<put-attribute name="afterfooter" value="" />
+	</definition>
+
+	<!-- PRODUCT DETAIL -->
+	<definition name="productDetail" extends="base.definition.multi">
+		<put-attribute name="title" value="Product Detail" />
+		<put-attribute name="content" value="/WEB-INF/views/product/product_detail.jsp" />
+		<put-attribute name="afterfooter"
+			value="/WEB-INF/views/product/after_product_detail.jsp" />
+	</definition>
+	
+	<!-- ABOUT -->
+	<definition name="about" extends="base.definition.multi">
+		<put-attribute name="title" value="About" />
+		<put-attribute name="content" value="/WEB-INF/views/about/about.jsp" />
+		<put-attribute name="afterfooter"
+			value="/WEB-INF/views/about/after_about.jsp" />
+	</definition>
+	
+	<!-- BLOG -->
+	<definition name="blog" extends="base.definition.multi">
+		<put-attribute name="title" value="Blog" />
+		<put-attribute name="content" value="/WEB-INF/views/blog/blog.jsp" />
+		<put-attribute name="afterfooter"
+			value="/WEB-INF/views/blog/after_blog.jsp" />
+	</definition>
+	
+	<!-- BLOG DETAIL -->
+	<definition name="blogDetail" extends="base.definition.multi">
+		<put-attribute name="title" value="Blog Detail" />
+		<put-attribute name="content" value="/WEB-INF/views/blog/blog_detail.jsp" />
+		<put-attribute name="afterfooter"
+			value="/WEB-INF/views/blog/after_blog_detail.jsp" />
+	</definition>
+	
+	<!-- CART -->
+	<definition name="cart" extends="base.definition.multi">
+		<put-attribute name="title" value="Cart" />
+		<put-attribute name="content" value="/WEB-INF/views/cart/cart.jsp" />
+		<put-attribute name="afterfooter"
+			value="/WEB-INF/views/cart/after_cart.jsp" />
+	</definition>
+	
+	<!-- CONTACT -->
+	<definition name="contact" extends="base.definition.multi">
+		<put-attribute name="title" value="Contact" />
+		<put-attribute name="content" value="/WEB-INF/views/contact/contact.jsp" />
+		<put-attribute name="afterfooter"
+			value="/WEB-INF/views/contact/after_contact.jsp" />
+	</definition>
+	
+	
+	<!-- ADMIN -->
+	
+	<!-- Base Define Admin -->
+	<definition name="base.definition.admin" template="/WEB-INF/views/common/classic_admin.jsp">
+		<put-attribute name="title" value="" />
+		<put-attribute name="menu" value="/WEB-INF/views/common/menu_admin.jsp" />
+		<put-attribute name="navigation" value="/WEB-INF/views/common/navigation_admin.jsp" />
+		<put-attribute name="content" value="" />
+		<put-attribute name="footer" value="/WEB-INF/views/common/footer_admin.jsp" />
+	</definition>
+	
+	<!-- Admin Home -->
+	<definition name="homeAdmin" extends="base.definition.admin">
+		<put-attribute name="title" value="Home Admin" />
+		<put-attribute name="content" value="/WEB-INF/views/index_admin.jsp" />
+	</definition>
+	
+	<!-- Admin List Category -->
+	<definition name="listCategory" extends="base.definition.admin">
+		<put-attribute name="title" value="Category" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/category/listCategory.jsp" />
+	</definition>
+	
+	<!-- Admin Create Category -->
+	<definition name="createCategory" extends="base.definition.admin">
+		<put-attribute name="title" value="Create Category" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/category/createCategory.jsp" />
+	</definition>
+	
+	<!-- Admin Edit Category -->
+	<definition name="editCategory" extends="base.definition.admin">
+		<put-attribute name="title" value="Edit Category" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/category/editCategory.jsp" />
+	</definition>
+	
+	<!-- Admin Delete Category -->
+	<definition name="deleteCategory" extends="base.definition.admin">
+		<put-attribute name="title" value="Delete Category" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/category/deleteCategory.jsp" />
+	</definition>
+	
+	<!-- Admin List Product -->
+	<definition name="listProduct" extends="base.definition.admin">
+		<put-attribute name="title" value="Product" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/product/listProduct.jsp" />
+	</definition>
+	
+	<!-- Admin Create Product -->
+	<definition name="createProduct" extends="base.definition.admin">
+		<put-attribute name="title" value="Create Product" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/product/createProduct.jsp" />
+	</definition>
+	
+	<!-- Admin Edit Product -->
+	<definition name="editProduct" extends="base.definition.admin">
+		<put-attribute name="title" value="Edit Product" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/product/editProduct.jsp" />
+	</definition>
+	
+	<!-- Admin Delete Product -->
+	<definition name="deleteProduct" extends="base.definition.admin">
+		<put-attribute name="title" value="Delete Product" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/product/deleteProduct.jsp" />
+	</definition>
+	
+	<!-- Admin List Image -->
+	<definition name="listImage" extends="base.definition.admin">
+		<put-attribute name="title" value="Image" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/image/listImage.jsp" />
+	</definition>
+	
+	<!-- Admin Create Image -->
+	<definition name="createImage" extends="base.definition.admin">
+		<put-attribute name="title" value="Create Image" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/image/createImage.jsp" />
+	</definition>
+	
+	<!-- Admin Edit Image -->
+	<definition name="editImage" extends="base.definition.admin">
+		<put-attribute name="title" value="Edit Image" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/image/editImage.jsp" />
+	</definition>
+	
+	<!-- Admin Delete Image -->
+	<definition name="deleteImage" extends="base.definition.admin">
+		<put-attribute name="title" value="Delete Image" />
+		<put-attribute name="content" value="/WEB-INF/views/admin/image/deleteImage.jsp" />
+	</definition>
+</tiles-definitions>
